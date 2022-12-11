@@ -1,6 +1,6 @@
 <?php
 
-$dsn = 'myspl:host=localhost;dbname=jyankenphp;charset=utf8';
+$dsn = 'myspl:host=localhost;dbname=db;charset=utf8';
 $user = 'root';
 $pass = 'hgs>xIdCK5i.#';
 
