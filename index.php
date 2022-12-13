@@ -1,11 +1,36 @@
+$dsn      = 'mysql:dbname=db;host=localhost';
+$user     = 'root';
+$password = 'hgs>xIdCK5i.#';
+
+<?php
+// DBへ接続
+try{
+    $dbh = new PDO($dsn, $user, $password);
+    // クエリの実行
+    $query = "SELECT * FROM jyannkenn";
+    $stmt = $dbh->query($query);
+
+    // 表示処理
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        $hands[] = $row['name'];
+    }
+}catch(PDOException $e){
+    print("データベースの接続に失敗しました".$e->getMessage());
+    die();
+}
+
+// 接続を閉じる
+$dbh = null;
+
 <?php
 $hands=['ぐー','ちょき','ぱー'];
 $picts=['gu','choki','pa'];
 $results=['あいこ','アナタのまけです...','アナタのかちです！'];
 if(isset($_POST['hand'])){
   $userHand=(int)$_POST['hand'];
-  $pcHand=rand(0,count($hands)-1);
+  $pcHand = ($userHand + 2) % 3;
 }
+
  ?>
 <!DOCTYPE html>
 <html>
