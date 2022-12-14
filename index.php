@@ -52,9 +52,6 @@ if(isset($_POST['hand'])){
 <img src="images/<?=$picts[$userHand]?>.png">
 <img src="images/<?=$picts[$pcHand]?>.png">
 </div>
-<?php
-var_dump($userHand, $pcHand, $hands, $results);
-?>
 <p><?=$results[($userHand + 3 -$pcHand) % 3]?></p>
 <?php endif;?>
 </body>
