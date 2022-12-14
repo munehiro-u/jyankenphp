@@ -1,3 +1,7 @@
+$dsn      = 'mysql:dbname=db;host=localhost';
+$user     = 'root';
+$password = 'hgs>xIdCK5i.#';
+
 <?php
 // DBへ接続
 try{
