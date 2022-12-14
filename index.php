@@ -26,8 +26,12 @@ $picts=['gu','choki','pa'];
 $results=['あいこ','アナタのまけです...','アナタのかちです！'];
 if(isset($_POST['hand'])){
     $userHand=(int)$_POST['hand'];
-//  $pcHand=rand(0,count($hands)-1);
-    $pcHand = ($userHand + 2) % 3;
+    if ($userHand == 0) {
+    $pcHand = 2;
+} else if ($userHand == 1) {
+    $pcHand = 0;
+} else if ($userHand == 2) {
+    $pcHand = 1;
 }
 
 ?>
