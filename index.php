@@ -22,6 +22,8 @@ try{
 // 接続を閉じる
 $dbh = null;
 
+<?php
+$hands=['ぐー','ちょき','ぱー'];
 $picts=['gu','choki','pa'];
 $results=['あいこ','アナタのまけです...','アナタのかちです！'];
 if(isset($_POST['hand'])){
